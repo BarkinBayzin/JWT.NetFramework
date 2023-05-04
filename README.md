@@ -30,4 +30,4 @@ OnAuthorization() methodu, gelen isteği kontrol eder ve JWT token'ın varlığ�
 
 JWT token doğrulama işlemini gerçekleştirecek olan attribute'ü, controller methodlarında kullanabiliriz. Bunun için, örneğin ValuesController sınıfını açın ve bir method'a attribute ekleyin:
 
-JwtAuthentication attribute'ünü Get() methoduna ekledik. Bu sayede, Get() methodu sadece geçerli bir JWT token ile çağrılabilir.
+JwtAuthentication attribute'ünü GetProtectedData() methoduna ekledik. Bu sayede, GetProtectedData() methodu sadece geçerli bir JWT token ile çağrılabilir.
