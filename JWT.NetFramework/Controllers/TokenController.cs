@@ -51,8 +51,8 @@ namespace JWT.NetFramework.Controllers
         {
             var identity = (ClaimsIdentity)User.Identity;
             var userName = identity.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Name)?.Value;
-
-            return Ok($"Hello, {userName}!");
+            var token = Request.Headers.Authorization.Parameter; // JWT tokenını al
+            return Ok($"Hello, {userName}! Your token is here => {token}");
         }
     }
 }
